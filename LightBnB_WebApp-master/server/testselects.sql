@@ -6,7 +6,7 @@ LIMIT 10;
 -- VALUES ('Hey Grandma', 'gma@gmail.com', 'password')
 -- RETURNING *;
 
-SELECT reservations.guest_id, reservations.start_date, reservations.end_date, properties.thumbnail_photo_url, properties.number_of_bedrooms, properties.number_of_bathrooms, properties.parking_spaces
+SELECT reservations.guest_id, reservations.start_date, 
 FROM reservations
 WHERE guest_id = 12
 LIMIT 10;
@@ -18,3 +18,6 @@ LIMIT 10;
   -- JOIN properties ON properties.id = property_id
   -- LIMIT $2;`, [guest_id, limit]
   -- )
+
+ INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, city, province, post_code)
+ VALUES ()
